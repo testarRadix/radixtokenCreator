@@ -1,0 +1,8 @@
+!pip install pycryptodome
+!pip install mnemonic
+!pip install hdwallet
+!pip install bech32
+!pip install ecdsa
+
+%APPDATA%\radix-olympia-desktop-wallet
+https://github.com/Qlause/radixCreateToken/blob/main/radixtoken.py
