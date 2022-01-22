@@ -1,3 +1,6 @@
+import json
+import requests
+
 payload =  json.dumps({
     "method": "construction.finalize_transaction",
     "params": {
