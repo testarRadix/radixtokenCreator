@@ -8,10 +8,17 @@ import ecdsa
 import json
 import requests
 
+# you have to fill some data to reveal your private / public key address
+# all data stored from wallet.json
+# you can access your wallet.json by accessing ' %APPDATA%\radix-olympia-desktop-wallet ' with your windows explorer
+# and fill neccesary data bellow
+
 # Password used when creating wallet
+# ===================fill======================
 password = ""
 
 # Key Derivation Function (kdf) parameters from wallet.json
+# ===================fill======================
 salt = ""
 
 lengthOfDerivedKey =32
@@ -35,8 +42,11 @@ print("Symetrical Key:", symmetrical_key.hex())
 # Use Mac to verify decryption is correct for provided parameters
 
 # Crypto parameters from wallet.json
+# ===================fill======================
 ciphertext = ""
+# ===================fill======================
 nonce = ""
+# ===================fill======================
 mac = ""
 
 cipher = AES.new(symmetrical_key, AES.MODE_GCM, nonce=bytearray.fromhex(nonce))
@@ -77,10 +87,6 @@ print("Derivation Path:", hdwallet.path())
 print("Private Key:", hdwallet.private_key())
 print("Public Key:", hdwallet.public_key())
 
-# Derivation Path: m/44'/1022'/0'/0/0'
-# Private Key: 320018f5ebf4730e5dfff4af7d41afb3dc7323523af9cb3b5875ee1eabf405c8
-# Public Key: 03094afd7e5a5d0891518a20e5a232edfc0862308865c7cd0c91645527f34b13a1
-
 # Add 04 byte to beginning of public key to create a Radix Engine Address
 readdr = b"\x04" + bytearray.fromhex(hdwallet.public_key())
 
@@ -89,8 +95,6 @@ readdr_bytes5 = bech32.convertbits(readdr, 8, 5)
 wallet_addr = bech32.bech32_encode("rdx", readdr_bytes5)
 
 print("Wallet Address: ", wallet_addr)
-
-# Wallet Address: rdx1qspsjjha0ed96zy32x9zpedzxtklczrzxzyxt37dpjgkg4f87d938gg2x9nn8
 
 # sign 
 # sk = ecdsa.SigningKey.from_string(bytearray.fromhex(hdwallet.private_key()), curve=ecdsa.SECP256k1)
