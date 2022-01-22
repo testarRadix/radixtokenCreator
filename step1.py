@@ -1,4 +1,6 @@
 # PLEASE DO REVEAL YOU PRIVATE KEY FIRST AND READ NOTE
+import json
+import requests
 
 payload =  json.dumps({
   "method": "construction.build_transaction",
