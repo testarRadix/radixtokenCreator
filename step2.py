@@ -1,3 +1,6 @@
+import edcsa
+from ecdsa.util import sigencode_der
+
 # sign 
 # dont delete the quote (')
 sk = ecdsa.SigningKey.from_string(bytearray.fromhex('your private key'), curve=ecdsa.SECP256k1)
