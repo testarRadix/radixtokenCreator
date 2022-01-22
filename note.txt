@@ -6,4 +6,4 @@
 !pip install bech32
 !pip install ecdsa
 !pip install json
-!pip install requets
+!pip install requests
