@@ -1,4 +1,3 @@
-curl -d '' 
 payload =  json.dumps({
     "method": "construction.finalize_transaction",
     "params": {
