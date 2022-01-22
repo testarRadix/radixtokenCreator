@@ -23,4 +23,5 @@ url = "https://mainnet.radixdlt.com/construction"
 
 response = requests.request("POST", url, headers=header, data=payload)
 
+# this will show information that contain several data. save blob, and blobhastosign
 response.text
