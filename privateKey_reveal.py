@@ -96,6 +96,3 @@ wallet_addr = bech32.bech32_encode("rdx", readdr_bytes5)
 
 print("Wallet Address: ", wallet_addr)
 
-# sign 
-# sk = ecdsa.SigningKey.from_string(bytearray.fromhex(hdwallet.private_key()), curve=ecdsa.SECP256k1)
-# signature = sk.sign_digest(bytes.fromhex('hastosign'), sigencode=sigencode_der).hex()
