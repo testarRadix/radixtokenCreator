@@ -1,3 +1,5 @@
+# PLEASE DO REVEAL YOU PRIVATE KEY FIRST AND READ NOTE
+
 payload =  json.dumps({
   "method": "construction.build_transaction",
   "params": {
