@@ -7,6 +7,7 @@ from ecdsa.util import sigencode_der
 import ecdsa
 import json
 import requests
+import json
 
 # you have to fill some data to reveal your private / public key address
 # all data stored from wallet.json
